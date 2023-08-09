@@ -32,3 +32,12 @@ with open(csv_filename, "w", newline="", encoding="utf-8") as csvfile:
     csv_writer = csv.writer(csvfile)
     for row_data in table_data:
         csv_writer.writerow(row_data)
+        
+# Read the CSV file
+with open(csv_filename, "r", encoding="utf-8") as csvfile:
+    csv_reader = csv.reader(csvfile)
+    
+    # Iterate through the rows of the CSV file
+    for row in csv_reader:
+        # Process each row as needed
+        print(row) 
